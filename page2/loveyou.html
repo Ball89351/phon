@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>love you kub baby<3</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<canvas id="heart"></canvas>
+
+<!-- ข้อความที่จะแสดงกลางจอ -->
+<div class="click-message">ลองคลิ๊กหน้าจอ!!</div>
+<div class="click-message1">อย่าหายไปไหนนะอ้วนน</div>
+
+<!-- เพิ่ม audio element -->
+<audio id="bg-music" loop volume="0.1">
+    <source src="../music/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="../js/script.js"></script>
+
+<script>
+  window.onload = function() {
+      let music = document.getElementById("bg-music");
+
+      // ฟังการคลิกที่หน้าเพื่อเล่นเพลง
+      document.body.addEventListener("click", function() {
+          music.play().catch((error) => {
+              console.log("Autoplay ถูกบล็อก:", error);
+              setTimeout(() => {
+                  music.play().catch(err => console.log("ยังคงไม่สามารถเล่นเพลง:", err));
+              }, 1000);
+          });
+
+          // ปรับระดับเสียงเป็น 50%
+          music.volume = 0.1;  // ปรับเป็นเสียงดังครึ่งหนึ่ง
+
+          // หยุดฟังการคลิกซ้ำ
+          document.body.removeEventListener("click", arguments.callee);
+      });
+  }
+</script>
+
+</body>
+</html>
