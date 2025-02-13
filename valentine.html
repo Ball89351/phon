@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/index.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Valentine's Day</title>
+    </head>
+    <body>
+        <div class="envelope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="words line1">To คุณพร</p>
+                    <p class="words line2">Happy Valentine's Day นะอ้วน</p>
+                    <p class="words line3">ขอให้มีความสุขมากๆนะครับ</p>
+                    <p class="words line4">Love U :</p>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="reset">
+            <button id="open">Open</button>
+            <button id="reset">Next</button>
+        </div>
+        <h1 class="valentine">Happy Valentine's Day</h1>
+        <script src="js/index.js"></script>
+        <!-- ลบ autoplay ออก และเพิ่มการเล่นผ่านปุ่ม -->
+        <audio id="bg-music">
+            <source src="music/music.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+</html>
